@@ -1,0 +1,6 @@
+[
+  {"pid":"P1", "arrival":0, "burst":7, "memory":120},
+  {"pid":"P2", "arrival":2, "burst":4, "memory":80},
+  {"pid":"P3", "arrival":4, "burst":1, "memory":60},
+  {"pid":"P4", "arrival":5, "burst":4, "memory":100}
+]

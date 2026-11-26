@@ -1,0 +1,30 @@
+OS RESOURCE MANAGEMENT SIMULATOR - COMPARISON REPORT
+======================================================
+
+CPU scheduling (lower is better)
+Algorithm | Avg waiting | Avg turnaround
+----------+-------------+---------------
+FCFS      | 4.75        | 8.75          
+SJF       | 4.00        | 8.00          
+RR        | 5.00        | 9.00          
+
+Page replacement
+Algorithm | Faults | Hits | Fault rate
+----------+--------+------+-----------
+FIFO      | 10     | 3    | 76.9%     
+LRU       | 9      | 4    | 69.2%     
+OPT       | 7      | 6    | 53.8%     
+
+Disk scheduling (lower movement is better)
+Algorithm | Movement | Service path                                                     
+----------+----------+------------------------------------------------------------------
+FCFS      | 640      | 53 -> 98 -> 183 -> 37 -> 122 -> 14 -> 124 -> 65 -> 67            
+SSTF      | 236      | 53 -> 65 -> 67 -> 37 -> 14 -> 98 -> 122 -> 124 -> 183            
+SCAN      | 331      | 53 -> 65 -> 67 -> 98 -> 122 -> 124 -> 183 -> 199 -> 37 -> 14     
+C-SCAN    | 382      | 53 -> 65 -> 67 -> 98 -> 122 -> 124 -> 183 -> 199 -> 0 -> 14 -> 37
+
+Observations
+- SJF favors short jobs; FCFS preserves arrival order; Round Robin shares CPU in time slices.
+- OPT is a theoretical page-replacement lower bound because it knows future references.
+- Disk movement depends on the initial head and direction; SCAN-family methods sweep the disk.
+- Results describe these sample inputs and are not universal performance guarantees.
