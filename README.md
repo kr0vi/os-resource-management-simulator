@@ -6,6 +6,10 @@ An integrated, menu-driven Python application demonstrating CPU scheduling, page
 
 From this folder, run `python os_simulator.py` (Windows) or `python3 os_simulator.py` (Linux/macOS). On systems with Bash, `bash run.sh` starts the same application. Select a menu item and enter `0` to exit. Choosing report generation prints the comparison and writes `report.txt`. Activity and handled errors are recorded in `activity.log`.
 
+## Project report
+
+See [project_report.pdf](project_report.pdf) for the project overview, algorithm explanations, sample results, run instructions, and limitations.
+
 ## Modules
 
 - **CPU scheduling:** FCFS, non-preemptive SJF, and Round Robin (quantum 2); arrival times are honored. Reports completion, turnaround, and waiting time, plus a Gantt-style trace.
